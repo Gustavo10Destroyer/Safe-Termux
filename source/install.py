@@ -18,11 +18,11 @@ try:
     print(f'{limpeza}{ciano}Digite a sua senha desejada!\nLembre-se que não é possível alterar sua senha depois.{fim}')
     senha = str (input ('Senha: '))
 
-    senha = sha256()
-    senha = senha.hexdigest()
+    senha = ((senha).encode('utf-8'))
+    hash = sha256(senha).hexdigest()
 
     arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp', 'w')
-    arquivo.write(senha)
+    arquivo.write(hash)
 
     print(f'{limpeza}{ciano}Senha definida com sucesso!{fim}')
 

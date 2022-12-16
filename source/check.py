@@ -44,16 +44,9 @@ def check(algoritmo, arquivo_nome):
             hash = sha256(arquivo_senha_digitada).hexdigest()
             arquivo_digitado.close()
 
-            print (hash)
-            print (arquivo_senha_digitada)
-            sleep (8)
-
             arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp', 'r')
 
-            print (arquivo.read())
-            sleep (8)
-
-            if arquivo_senha_digitada == arquivo.read():
+            if hash == arquivo.read():
                 resultado = True
                 arquivo.close()
 
