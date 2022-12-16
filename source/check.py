@@ -4,7 +4,6 @@ def check(algoritmo, arquivo_nome):
 
     try:
 
-        from time import sleep
         from json import loads
         from hashlib import sha256
 
