@@ -13,10 +13,12 @@ def padlock(status):
     ciano = '\033[1;36m'
     amarelo = '\033[1;33m'
     vermelho = '\033[1;31m'
+    limpeza = '\x1b[H\x1b[2J\x1b'
     fim = '\033[m'
 
     if status == 0:
 
+        print(f'{limpeza}{verde}Safe-Termux - Termux Desbloqueado!{fim}')
         print('')
         print(f'{verde}          vILLYs2q:{fim}')
         print(f'{verde}        sBq 77::rY1ZB{fim}')
@@ -32,9 +34,12 @@ def padlock(status):
         print(f'{verde}     .27ri.irvrJvirj2US{fim}')
         print(f'{verde}     .dUs7rvvvsj1s2Pgdg{fim}')
         print('')
+
+        sleep(3)
     
     elif status == 1:
 
+        print(f'{limpeza}{ciano}Safe-Termux - Bloqueio Biometrico!{fim}')
         print('')
         print(f'{ciano}          vILLYs2q:{fim}')
         print(f'{ciano}        sBq 77::rY1ZB{fim}')
@@ -69,7 +74,8 @@ def padlock(status):
             return resultado
 
     elif status == 2:
-        
+
+        print(f'{limpeza}{amarelo}Safe-Termux - Bloqueio de Senha!{fim}')
         print('')
         print(f'{amarelo}          vILLYs2q:{fim}')
         print(f'{amarelo}        sBq 77::rY1ZB{fim}')
@@ -137,6 +143,7 @@ def padlock(status):
     
     elif status == 3:
 
+        print(f'{limpeza}{vermelho}Safe-Termux - Bloqueio Total!{fim}')
         print('')
         print(f'{vermelho}          vILLYs2q:{fim}')
         print(f'{vermelho}        sBq 77::rY1ZB{fim}')

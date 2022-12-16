@@ -6,11 +6,9 @@ Esse projeto não está em fase funcional, e esta momentaneamente descontinuado,
 
 Esse projeto tem como objetivo criar um sistema de senha digitada + biometria, para a proteção do Termux contra acessos de terceiros, básicamente o programa deve ser indicado para ser iniciado como shell padrão, para isso o usuário deverar executa o instalador do programa pelo comando:
 
->./install.sh
+>./install.py
 
-O instalador ira movimentar os arquivos para a pasta *$PREFIX/bin* do Termux, em seguida ira configurar para que o *main.py* se torne a shell de inicialização padrão do sistema, e o usuário ira definir sua senha padrão, que não pode ser alterada oficialmente pelo programa.
-
-A parti dai, sempre que o usuário abrir uma shell ele deve ou colocar sua digital para desbloquear seu Termux, ou colocar sua senha de usuário.
+A parti desse momento, sempre que o usuário abrir uma shell ele deve ou colocar sua digital para desbloquear seu Termux, ou colocar sua senha de usuário.
 
 Se o usuário errar a senha muitas vezes, tentar fechar o Termux e o abrir novamente, o programa ira ver os logs anteriores das tentativas de senhas falhas, e atráves de quantas tentativas o usuário fracassar, ou o programa ira travar permanentemente, deixando impossível se iniciar o Termux novamente sem que precise limpar o armazenamento do Termux.
 
