@@ -38,7 +38,7 @@ def check(algoritmo, arquivo_nome):
             arquivo = open(arquivo_nome, 'r')
             arquivo_senha_digitada = arquivo.read()
             arquivo_senha_digitada = loads(arquivo_dados)
-            arquivo_senha_digitada = arquivo_dados['text']
+            arquivo_senha_digitada = arquivo_senha_digitada['text']
             arquivo_senha_digitada = sha256()
             arquivo_senha_digitada = arquivo_dados.hexdigest()
             arquivo.close()
