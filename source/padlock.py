@@ -72,7 +72,7 @@ def padlock(status):
 
                 system('termux-fingerprint -t "Autenticação Biométrica" -d "Por favor, coloque sua digital no sensor:" | grep -n AUTH_RESULT > $HOME/.bloqueio/.bio')
 
-                resultado = check(1)
+                resultado = check(1, '/data/data/com.termux/files/home/.bloqueio/.bio')
 
                 return resultado
 

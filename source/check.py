@@ -13,7 +13,7 @@ def check(algoritmo, arquivo_nome):
 
         if algoritmo == 1:
 
-            arquivo = open('/data/data/com.termux/files/home/.bloqueio/.bio', 'r')
+            arquivo = open(arquivo_nome, 'r')
             arquivo_dados = arquivo.read()
             arquivo.close()
 
