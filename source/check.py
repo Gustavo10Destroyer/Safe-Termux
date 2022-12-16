@@ -40,7 +40,7 @@ def check(algoritmo, arquivo_nome):
             arquivo_senha_digitada = loads(arquivo_senha_digitada)
             arquivo_senha_digitada = arquivo_senha_digitada['text']
             arquivo_senha_digitada = sha256()
-            arquivo_senha_digitada = arquivo_dados.hexdigest()
+            arquivo_senha_digitada = arquivo_senha_digitada.hexdigest()
             arquivo.close()
 
             arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp')
