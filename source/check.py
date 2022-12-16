@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/python3
 
-def check(algoritmo, arquivo_nome=''):
+def check(algoritmo, arquivo_nome):
 
     try:
 

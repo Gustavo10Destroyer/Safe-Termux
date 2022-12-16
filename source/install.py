@@ -10,7 +10,7 @@ try:
     limpeza = '\x1b[H\x1b[2J\x1b'
     fim = '\033[m'
 
-    system('apt update -y ; apt full-upgrade -y ; apt install fish termux-api -y ; python -m pip install --upgrade pip ; mkdir $HOME/.bloqueio ; echo "$HOME/Safe-Termux/source/main.py" >> $HOME/.bashrc ; echo "exit" >> $HOME/.bashrc ; ln -s $HOME/.config/fish/config.fish')
+    system('apt update -y ; apt full-upgrade -y ; apt install fish termux-api -y ; python -m pip install --upgrade pip ; mkdir $HOME/.bloqueio ; echo "$HOME/Safe-Termux/source/main.py" >> $HOME/.bashrc ; echo "exit" >> $HOME/.bashrc ; ln -s $HOME/.config/fish/config.fish $HOME/.fishrc')
 
     print(f'{limpeza}{ciano}Copie suas configurações de ".bashrc" em ".fishrc" assim que possível.')
     sleep(5)
