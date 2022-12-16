@@ -10,7 +10,7 @@ try:
     desbloqueio = False
     bypass = False
 
-    for contador in range(1,3):
+    for contador in range(1,4):
 
         if bypass == True:
             break

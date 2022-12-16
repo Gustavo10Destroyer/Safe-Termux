@@ -118,6 +118,8 @@ def padlock(status):
             except:
                 pass
 
+            print (f'Você tem direito a {tentativas} tentativas!')
+
             for contador in range (tentativas, 0, -1):
 
                 sleep(3)
