@@ -26,4 +26,4 @@ Da para se alterar a senha ou desinstalar o programa, mas para isso eu não irei
 
 É obrigatório se ter o Termux API instalado, caso contrário o programa não ira funcionar, é extritamente obrigatório para o funcionamento do programa. 
 
-<p align="center">- **d3str0yer** -</p>
+<p align="center">- <strong>d3str0yer</strong> -</p>
