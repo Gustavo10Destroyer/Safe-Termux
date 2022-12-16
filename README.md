@@ -18,8 +18,6 @@ Se o usuário errar a senha muitas vezes, tentar fechar o Termux e o abrir novam
 
 Um tipo de acontecimento alternativo que poderia acontecer caso o usuário erre a senha demais, seria a possibilidade do Termux limpar todo armazenamento dele mesmo, + o armazenamento do celular inteiro, e após tudo isso se executar um *fork bomb* para travar o aparelho por um tempo, mas, por causa de alto risco e perigo dessa função, ela fica desativada por padrão.
 
-Observação, existe chance de haver brechas de segurança na função *fail*, então, eu recomendo fortemente que mantenha essa função desativada.
-
 Bom, espero que gostem do meu repositório, o código não está perfeito nem de longe, da pra otimizar ele usando funções e outras coisas, mas no momento, é isso que posso lhe entregar a vocẽs.
 
 **Observação: Da para se alterar a senha ou desinstalar o programa, mas para isso eu não irei ajudar vocẽs, façam esses procedimentos por vontade própria com seus métodos próprios.**

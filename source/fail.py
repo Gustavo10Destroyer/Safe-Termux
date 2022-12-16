@@ -1,8 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/python3
 
-'''Função desativada por mau-funcionamento e por conta do alto risco de causa problemas ao usuário.'''
-'''Existe chance de falha de segurança no programa durante o processo de limpeza do armazenamento, ative essa função por sua conta e risco.'''
-
 def fail():
 
     try:
