@@ -2,53 +2,59 @@
 
 def check(algoritmo, arquivo_nome=''):
 
-    from json import loads
-    from hashlib import sha256
+    try:
 
-    amarelo = '\033[1;33m'
-    vermelho = '\033[1;31m'
-    fim = '\033[m'
+        from json import loads
+        from hashlib import sha256
 
-    if algoritmo == 1:
+        amarelo = '\033[1;33m'
+        vermelho = '\033[1;31m'
+        fim = '\033[m'
 
-        arquivo = open('/data/data/com.termux/files/home/.bloqueio/.bio')
-        arquivo_dados = arquivo.read()
-        arquivo.close()
+        if algoritmo == 1:
 
-        if 'SUCCESS' in arquivo_dados:
-            resultado = True
+            arquivo = open('/data/data/com.termux/files/home/.bloqueio/.bio')
+            arquivo_dados = arquivo.read()
+            arquivo.close()
 
-        elif 'FAILURE' in arquivo_dados:
-            resultado = False
+            if 'SUCCESS' in arquivo_dados:
+                resultado = True
 
-        elif 'UNKNOWN' in arquivo_dados:
-            print(f'{amarelo}Aconteceu algum erro!{fim}')
-            resultado = False
+            elif 'FAILURE' in arquivo_dados:
+                resultado = False
 
-        else:
-            print(f'{vermelho}Aconteceu algum erro desconhecido!{fim}')
-            resultado = False
+            elif 'UNKNOWN' in arquivo_dados:
+                print(f'{amarelo}Aconteceu algum erro!{fim}')
+                resultado = False
 
-        return resultado
+            else:
+                print(f'{vermelho}Aconteceu algum erro desconhecido!{fim}')
+                resultado = False
 
-    if algoritmo == 2:
+            return resultado
 
-        arquivo = open(arquivo_nome)
-        arquivo_dados = arquivo.read()
-        arquivo_dados = loads(arquivo_dados)
-        arquivo.close()
+        if algoritmo == 2:
 
-        arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp')
-        arquivo_senha = arquivo.read()
-        arquivo.close()
+            arquivo = open(arquivo_nome)
+            arquivo_dados = arquivo.read()
+            arquivo_dados = loads(arquivo_dados)
+            arquivo.close()
 
-        arquivo_senha_digitada = arquivo_dados['text']
-        arquivo_senha_digitada = sha256(arquivo_senha_digitada.encode('utf-8')).hexdigest()
+            arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp')
+            arquivo_senha = arquivo.read()
+            arquivo.close()
 
-        if arquivo_senha_digitada == arquivo_senha:
-            resultado = True
+            arquivo_senha_digitada = arquivo_dados['text']
+            arquivo_senha_digitada = sha256(arquivo_senha_digitada.encode('utf-8')).hexdigest()
 
-        else:
-            resultado = False
+            if arquivo_senha_digitada == arquivo_senha:
+                resultado = True
 
-        return resultado
+            else:
+                resultado = False
+
+            return resultado
+
+    except (KeyboardInterrupt):
+
+        exit()

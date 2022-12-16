@@ -1,29 +1,35 @@
 #!/data/data/com.termux/files/usr/bin/python3
 
-from os import system
+try:
 
-'''from fail import fail - Função desativada por mau-funcionamento e por conta do alto risco de causa problemas ao usuário.'''
-from padlock import padlock
+    from os import system
 
-desbloqueio = False
-bypass = False
+    '''from fail import fail - Função desativada por mau-funcionamento e por conta do alto risco de causa problemas ao usuário.'''
+    from padlock import padlock
 
-for contador in range(1,3):
+    desbloqueio = False
+    bypass = False
 
-    if bypass == True:
-        break
+    for contador in range(1,3):
 
-    desbloqueio = padlock(contador)
+        if bypass == True:
+            break
+
+        desbloqueio = padlock(contador)
+
+        if desbloqueio == True:
+            bypass = True
 
     if desbloqueio == True:
-        bypass = True
 
-if desbloqueio == True:
+        padlock(0)
+        system('rm -f $HOME/.bloqueio/.bio $HOME/.bloqueio/.key-1 $HOME/.bloqueio/.key-2 $HOME/.bloqueio/.key-3 > /dev/null ; fish')
 
-    padlock(0)
-    system('rm -f $HOME/.bloqueio/.bio $HOME/.bloqueio/.key-1 $HOME/.bloqueio/.key-2 $HOME/.bloqueio/.key-3 > /dev/null ; fish')
+    else:
 
-else:
+        '''fail() - Função desativada por mau-funcionamento e por conta do alto risco de causa problemas ao usuário.'''
+        exit()
 
-    '''fail() - Função desativada por mau-funcionamento e por conta do alto risco de causa problemas ao usuário.'''
+except (KeyboardInterrupt):
+
     exit()
