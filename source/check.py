@@ -40,20 +40,18 @@ def check(algoritmo, arquivo_nome):
             arquivo_senha_digitada = arquivo_digitado.read()
             arquivo_senha_digitada = loads(arquivo_senha_digitada)
             arquivo_senha_digitada = arquivo_senha_digitada['text']
-            print (arquivo_senha_digitada)
-            sleep (7)
-            hash = sha256()
-            hash.update(arquivo_senha_digitada)
+            arquivo_senha_digitada = ((arquivo_senha_digitada).encode('utf-8'))
+            hash = sha256(arquivo_senha_digitada).hexdigest()
             arquivo_digitado.close()
-            print (hash)
 
+            print (hash)
             print (arquivo_senha_digitada)
-            sleep (10)
+            sleep (8)
 
             arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp', 'r')
 
             print (arquivo.read())
-            sleep (10)
+            sleep (8)
 
             if arquivo_senha_digitada == arquivo.read():
                 resultado = True
