@@ -34,3 +34,4 @@ Da para se alterar a senha ou desinstalar o programa, mas para isso eu não irei
 Agradecimentos especiais a vocês que me ajudaram nesse projeto, agradeço ao D3str0yer por todo apoio e suporte com as partes mais complexas do código, agradeço ao Dark Walker por me ajudar com todo o projeto do início ao fim, por me ajudar com a arte ASCII, variáveis, obrigado por literalmente tudo.
 
 <p align="center">— <strong>d3str0yer</strong> —</p>
+<p style="background: -webkit-linear-gradient(#eee, #333);">teste?!</p>
