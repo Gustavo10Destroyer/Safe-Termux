@@ -40,9 +40,12 @@ def check(algoritmo, arquivo_nome):
             arquivo_senha_digitada = arquivo_digitado.read()
             arquivo_senha_digitada = loads(arquivo_senha_digitada)
             arquivo_senha_digitada = arquivo_senha_digitada['text']
-            arquivo_senha_digitada = sha256()
-            arquivo_senha_digitada = arquivo_senha_digitada.hexdigest()
+            print (arquivo_senha_digitada)
+            sleep (7)
+            hash = sha256()
+            hash.update(arquivo_senha_digitada)
             arquivo_digitado.close()
+            print (hash)
 
             print (arquivo_senha_digitada)
             sleep (10)
