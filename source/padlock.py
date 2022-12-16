@@ -95,8 +95,6 @@ def padlock(status):
             print(f'{amarelo}     .dUs7rvvvsj1s2Pgdg{fim}')
             print('')
 
-            sleep(3)
-
             tentativas = 3
 
             try:
@@ -121,6 +119,8 @@ def padlock(status):
                 pass
 
             for contador in range (tentativas, 0, -1):
+
+                sleep(3)
 
                 if tentativas == 1:
                     system('termux-dialog -t "Por favor, digite a sua senha de usuário:" -i "Senha" -p > $HOME/.bloqueio/.key-1')
