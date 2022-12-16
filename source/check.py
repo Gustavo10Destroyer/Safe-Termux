@@ -13,7 +13,7 @@ def check(algoritmo, arquivo_nome):
 
         if algoritmo == 1:
 
-            arquivo = open('/data/data/com.termux/files/home/.bloqueio/.bio', 'r')
+            arquivo = open('/data/data/com.termux/files/home/.bloqueio/.bio')
             arquivo_dados = arquivo.read()
             arquivo.close()
 
@@ -40,7 +40,7 @@ def check(algoritmo, arquivo_nome):
             arquivo_dados = loads(arquivo_dados)
             arquivo.close()
 
-            arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp', 'r')
+            arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp')
             arquivo_senha = arquivo.read()
             arquivo.close()
 
