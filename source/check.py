@@ -4,6 +4,7 @@ def check(algoritmo, arquivo_nome):
 
     try:
 
+        from time import sleep
         from json import loads
         from hashlib import sha256
 
@@ -43,7 +44,13 @@ def check(algoritmo, arquivo_nome):
             arquivo_senha_digitada = arquivo_senha_digitada.hexdigest()
             arquivo_digitado.close()
 
+            print (arquivo_senha_digitada)
+            sleep (10)
+
             arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp', 'r')
+
+            print (arquivo.read())
+            sleep (10)
 
             if arquivo_senha_digitada == arquivo.read():
                 resultado = True
