@@ -62,9 +62,10 @@ def padlock(status):
 
             try:
 
-                tentativas_anteriores_bio = open('/data/data/com.termux/files/home/.bloqueio/.bio')
-                tentativas_anteriores_bio.close()
-            
+                tentativa_anterior_bio = open('/data/data/com.termux/files/home/.bloqueio/.bio', 'r')
+                tentativa_anterior_bio.close()
+
+                resultado = False
                 return resultado
 
             except:

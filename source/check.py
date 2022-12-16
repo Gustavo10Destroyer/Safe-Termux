@@ -13,7 +13,7 @@ def check(algoritmo, arquivo_nome):
 
         if algoritmo == 1:
 
-            arquivo = open('/data/data/com.termux/files/home/.bloqueio/.bio')
+            arquivo = open('/data/data/com.termux/files/home/.bloqueio/.bio', 'r')
             arquivo_dados = arquivo.read()
             arquivo.close()
 
@@ -24,11 +24,11 @@ def check(algoritmo, arquivo_nome):
                 resultado = False
 
             elif 'UNKNOWN' in arquivo_dados:
-                print(f'{amarelo}Aconteceu algum erro!{fim}')
+                print(f'{amarelo}Aconteceu algum erro, mas foi detectado pelo sistema!{fim}')
                 resultado = False
 
             else:
-                print(f'{vermelho}Aconteceu algum erro desconhecido!{fim}')
+                print(f'{vermelho}Aconteceu algum erro desconhecido, que não foi detectado pelo sistema!{fim}')
                 resultado = False
 
             return resultado
