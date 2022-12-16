@@ -100,22 +100,22 @@ def padlock(status):
             tentativas = 3
 
             try:
-                tentativas_anteriores_key_1 = open('/data/data/com.termux/files/home/.bloqueio/.key-1')
-                tentativas_anteriores_key_1.close()
+                tentativas_anteriores = open('/data/data/com.termux/files/home/.bloqueio/.key-1', 'r')
+                tentativas_anteriores.close()
                 tentativas -= 1
             except:
                 pass
 
             try:
-                tentativas_anteriores_key_2 = open('/data/data/com.termux/files/home/.bloqueio/.key-2')
-                tentativas_anteriores_key_2.close()
+                tentativas_anteriores = open('/data/data/com.termux/files/home/.bloqueio/.key-2', 'r')
+                tentativas_anteriores.close()
                 tentativas -= 1
             except:
                 pass
 
             try:
-                tentativas_anteriores_key_3 = open('/data/data/com.termux/files/home/.bloqueio/.key-3')
-                tentativas_anteriores_key_3.close()
+                tentativas_anteriores = open('/data/data/com.termux/files/home/.bloqueio/.key-3', 'r')
+                tentativas_anteriores.close()
                 tentativas -= 1
             except:
                 pass
@@ -142,6 +142,7 @@ def padlock(status):
                 else:
                     print (f'Tente novamente, você tem {tentativas} tentativas sobrando!')
 
+            resultado = False
             return resultado
     
         elif status == 3:

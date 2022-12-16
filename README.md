@@ -17,3 +17,5 @@ Um tipo de acontecimento alternativo que poderia acontecer caso o usuário erre 
 ~~Sim, eu sei que é irônico, uma função descontinuada dentro de um repositório descontinuado.~~
 
 Observação, existe chance de haver brechas de segurança na função *fail*, além de não funcionar corretamente e ser perigoso, há chances de brechas, então, novamente, eu recomendo fortemente que mantenha essa função desativada.
+
+Bom, espero que gostem do meu repositório, o código não está perfeito nem de longe, da pra otimizar ele usando funções e outras coisas, mas no momento, é isso que posso lhe entregar a vocẽs.

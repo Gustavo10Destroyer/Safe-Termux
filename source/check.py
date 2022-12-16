@@ -35,19 +35,20 @@ def check(algoritmo, arquivo_nome):
 
         if algoritmo == 2:
 
-            arquivo = open(arquivo_nome)
+            arquivo = open(arquivo_nome, 'r')
             arquivo_dados = arquivo.read()
             arquivo_dados = loads(arquivo_dados)
             arquivo.close()
 
+            senha = sha256()
+            senha = senha.hexdigest()
+            arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp', 'w')
+
             arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp')
-            arquivo_senha = arquivo.read()
+            arquivo_senha_original = arquivo.read()
             arquivo.close()
 
-            arquivo_senha_digitada = arquivo_dados['text']
-            arquivo_senha_digitada = sha256(arquivo_senha_digitada.encode('utf-8')).hexdigest()
-
-            if arquivo_senha_digitada == arquivo_senha:
+            if arquivo_senha_digitada == arquivo_senha_original:
                 resultado = True
 
             else:
