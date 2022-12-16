@@ -7,7 +7,7 @@ ciano = '\033[1;36m'
 limpeza = '\x1b[H\x1b[2J\x1b'
 fim = '\033[m'
 
-system('mkdir $HOME/.bloqueio ; echo "$HOME/Safe-Termux/source/main.py" >> $HOME/.bashrc ; echo "exit" >> $HOME/.bashrc')
+system('apt update -y ; apt full-upgrade -y ; apt install fish termux-api -y ; mkdir $HOME/.bloqueio ; echo "$HOME/Safe-Termux/source/main.py" >> $HOME/.bashrc ; echo "exit" >> $HOME/.bashrc')
 
 print(f'{limpeza}{ciano}Digite a sua senha desejada!\nLembre-se que não é possível alterar sua senha depois.{fim}')
 senha = str (input ('Senha: '))

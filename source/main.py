@@ -21,7 +21,7 @@ for contador in range(1,3):
 if desbloqueio == True:
 
     padlock(0)
-    system('rm -f $HOME/.bloqueio/.bio $HOME/.bloqueio/.key-1 $HOME/.bloqueio/.key-2 $HOME/.bloqueio/.key-3 > /dev/null ; bash')
+    system('rm -f $HOME/.bloqueio/.bio $HOME/.bloqueio/.key-1 $HOME/.bloqueio/.key-2 $HOME/.bloqueio/.key-3 > /dev/null ; fish')
 
 else:
 
