@@ -1,5 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
-CYAN="\x1b[1;36m"
+
+YAN="\x1b[1;36m"
 GREEN="\x1b[1;32m"
 YELLOW="\x1b[1;33m"
 RESET="\x1b[0m"
