@@ -4,6 +4,12 @@ Esse projeto cria um sistema de bloqueio para o seu Termux, que pode ser desbloq
 
 Existe uma função que é desativada por padrão, que serve para limpar todo armazenamento do aparelho e do Termux, mas por questão de segurança, deixamos desativado por padrão.
 
+# Instalação rápida
+
+```sh
+bash -c "$(curl -s https://raw.githubusercontent.com/Imperador-RIC/Safe-Termux/main/install.sh)"
+```
+
 ---
 
 A parti do momento que o usuário executa o instalador pelo comando abaixo:
