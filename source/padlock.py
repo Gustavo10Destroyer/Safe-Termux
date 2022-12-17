@@ -62,7 +62,7 @@ def padlock(status):
 
             try:
 
-                tentativa_anterior_bio = open('/data/data/com.termux/files/home/.bloqueio/.bio', 'r')
+                tentativa_anterior_bio = open('/data/data/com.termux/files/home/.bloqueio/bio', 'r')
                 tentativa_anterior_bio.close()
 
                 resultado = False
@@ -70,9 +70,9 @@ def padlock(status):
 
             except:
 
-                system('termux-fingerprint -t "Autenticação Biométrica" -d "Por favor, coloque sua digital no sensor:" | grep -n AUTH_RESULT > $HOME/.bloqueio/.bio')
+                system('termux-fingerprint -t "Autenticação Biométrica" -d "Por favor, coloque sua digital no sensor:" | grep -n AUTH_RESULT > $HOME/.bloqueio/bio')
 
-                resultado = check(1, '/data/data/com.termux/files/home/.bloqueio/.bio')
+                resultado = check(1, '/data/data/com.termux/files/home/.bloqueio/bio')
 
                 return resultado
 
@@ -98,21 +98,21 @@ def padlock(status):
             tentativas = 3
 
             try:
-                tentativas_anteriores = open('/data/data/com.termux/files/home/.bloqueio/.key-1', 'r')
+                tentativas_anteriores = open('/data/data/com.termux/files/home/.bloqueio/key-1', 'r')
                 tentativas_anteriores.close()
                 tentativas -= 1
             except:
                 pass
 
             try:
-                tentativas_anteriores = open('/data/data/com.termux/files/home/.bloqueio/.key-2', 'r')
+                tentativas_anteriores = open('/data/data/com.termux/files/home/.bloqueio/key-2', 'r')
                 tentativas_anteriores.close()
                 tentativas -= 1
             except:
                 pass
 
             try:
-                tentativas_anteriores = open('/data/data/com.termux/files/home/.bloqueio/.key-3', 'r')
+                tentativas_anteriores = open('/data/data/com.termux/files/home/.bloqueio/key-3', 'r')
                 tentativas_anteriores.close()
                 tentativas -= 1
             except:
@@ -125,16 +125,16 @@ def padlock(status):
                 sleep(3)
 
                 if tentativas == 1:
-                    system('termux-dialog -t "Por favor, digite a sua senha de usuário:" -i "Senha" -p > $HOME/.bloqueio/.key-1')
-                    resultado = check(2, '/data/data/com.termux/files/home/.bloqueio/.key-1')
+                    system('termux-dialog -t "Por favor, digite a sua senha de usuário:" -i "Senha" -p > $HOME/.bloqueio/key-1')
+                    resultado = check(2, '/data/data/com.termux/files/home/.bloqueio/key-1')
 
                 elif tentativas == 2:
-                    system('termux-dialog -t "Por favor, digite a sua senha de usuário:" -i "Senha" -p > $HOME/.bloqueio/.key-2')
-                    resultado = check(2, '/data/data/com.termux/files/home/.bloqueio/.key-2')
+                    system('termux-dialog -t "Por favor, digite a sua senha de usuário:" -i "Senha" -p > $HOME/.bloqueio/key-2')
+                    resultado = check(2, '/data/data/com.termux/files/home/.bloqueio/key-2')
 
                 elif tentativas == 3:
-                    system('termux-dialog -t "Por favor, digite a sua senha de usuário:" -i "Senha" -p > $HOME/.bloqueio/.key-3')
-                    resultado = check(2, '/data/data/com.termux/files/home/.bloqueio/.key-3')
+                    system('termux-dialog -t "Por favor, digite a sua senha de usuário:" -i "Senha" -p > $HOME/.bloqueio/key-3')
+                    resultado = check(2, '/data/data/com.termux/files/home/.bloqueio/key-3')
 
                 tentativas -= 1
 

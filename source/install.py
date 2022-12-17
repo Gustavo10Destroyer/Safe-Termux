@@ -10,7 +10,7 @@ try:
     limpeza = '\x1b[H\x1b[2J\x1b'
     fim = '\033[m'
 
-    system('apt update -y ; apt full-upgrade -y ; apt install termux-api -y ; python -m pip install --upgrade pip ; touch $HOME/.hushlogin ; mkdir $HOME/.bloqueio ; echo "python $HOME/Safe-Termux/source/main.py" >> $PREFIX/etc/termux-login.sh')
+    system('apt update -y ; apt full-upgrade -y ; apt install termux-api -y ; python -m pip install --upgrade pip ; touch $HOME/.hushlogin ; mkdir $HOME/.bloqueio ; echo "python $HOME/Safe-Termux/source/main.py" >> $PREFIX/etc/termux-login.sh ; echo "exit" > null.sh ; chmod +x null.sh ; mv null.sh $PREFIX/bin ; chsh -s $PREFIX/bin/null.sh')
 
     print(f'{limpeza}{ciano}Copie suas configurações de ".bashrc" em ".fishrc" assim que possível.')
     sleep(5)
@@ -21,7 +21,7 @@ try:
     senha = ((senha).encode('utf-8'))
     hash = sha256(senha).hexdigest()
 
-    arquivo = open('/data/data/com.termux/files/home/.bloqueio/.kp', 'w')
+    arquivo = open('/data/data/com.termux/files/home/.bloqueio/kp', 'w')
     arquivo.write(hash)
 
     print(f'{limpeza}{ciano}Senha definida com sucesso!{fim}')
