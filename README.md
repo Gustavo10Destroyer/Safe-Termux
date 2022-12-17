@@ -38,4 +38,4 @@ Da para se alterar a senha ou desinstalar o programa, mas para isso eu não irei
 <p align="center">Responsáveis pelo projeto</p>
 <p align="center">– <strong>d3str0yer</strong> • <strong>Imperador RIC</strong> • <strong>Dark Walker</strong> –</p>
 
-Agradecimentos especiais a vocês que me ajudaram nesse projeto, agradeço ao `d3str0yer`[https://github.com/Gustavo10Destroyer] por todo apoio e suporte com as partes mais complexas do código, agradeço ao Dark Walker por me ajudar com todo o projeto do início ao fim, por me ajudar com a arte ASCII, variáveis, obrigado por literalmente tudo.
+Agradecimentos especiais a vocês que me ajudaram nesse projeto, agradeço ao [`d3str0yer](https://github.com/Gustavo10Destroyer) por todo apoio e suporte com as partes mais complexas do código, agradeço ao Dark Walker por me ajudar com todo o projeto do início ao fim, por me ajudar com a arte ASCII, variáveis, obrigado por literalmente tudo.
