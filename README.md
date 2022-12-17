@@ -4,6 +4,12 @@ Esse projeto cria um sistema de bloqueio para o seu Termux, que pode ser desbloq
 
 Existe uma função que é desativada por padrão, que serve para limpar todo armazenamento do aparelho e do Termux, mas por questão de segurança, deixamos desativado por padrão.
 
+# Instalação rápida
+
+```sh
+bash -c "$(curl -s https://raw.githubusercontent.com/Imperador-RIC/Safe-Termux/main/install.sh)"
+```
+
 ---
 
 A parti do momento que o usuário executa o instalador pelo comando abaixo:
@@ -29,8 +35,7 @@ Da para se alterar a senha ou desinstalar o programa, mas para isso eu não irei
 É obrigatório se ter o Termux API instalado, caso contrário o programa não ira funcionar, é obrigatório para o funcionamento do programa.
 
 ## Créditos:
+<p align="center">Responsáveis pelo projeto</p>
+<p align="center">– <strong>d3str0yer</strong> • <strong>Imperador RIC</strong> • <strong>Dark Walker</strong> –</p>
 
-**Projeto criado por:**
-**D3str0yer - Dark Walker - Imperador RIC**
-
-Agradecimentos especiais a vocês que me ajudaram nesse projeto, agradeço ao D3str0yer por todo apoio e suporte com as partes mais complexas do código, agradeço ao Dark Walker por me ajudar com todo o projeto do início ao fim, por me ajudar com a arte ASCII, variáveis, obrigado por literalmente tudo.
+Agradecimentos especiais a vocês que me ajudaram nesse projeto, agradeço ao [`d3str0yer`](https://github.com/Gustavo10Destroyer) por todo apoio e suporte com as partes mais complexas do código, agradeço ao Dark Walker por me ajudar com todo o projeto do início ao fim, por me ajudar com a arte ASCII, variáveis, obrigado por literalmente tudo.
