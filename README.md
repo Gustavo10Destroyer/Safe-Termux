@@ -26,6 +26,8 @@ Da para se alterar a senha ou desinstalar o programa, mas para isso eu não irei
 
 É obrigatório se ter o Termux API instalado, caso contrário o programa não ira funcionar, é extritamente obrigatório para o funcionamento do programa.
 
+É possível burla a proteção se o usuário clicar em *CRTL + X* muito rápidamente, isso fará com que o *Bash* cancele a tentativa de abrir o *.bashrc*, e com isso, o programa não será iniciado, fazendo assim, o usuário ter acesso ao *Bash* sem ter que passa pelo processo de verificação.
+
 Caso o limite de tentativas seja atingido, é possível recuperar o acesso ao Termux, e reiniciar a contagem, ou até mesmo desativar o bloqueio, para isso, o usuário precisa entrar no Termux pelo modo *failsafe*, e por ele, o usuário pode apagar os logs de tentativas anteriores na pasta *$HOME/.bloqueio*, com isso a contagem de tentativas reinicia, ou, o usuário pode de apagar o *.bashrc* para desativar o sistema de bloqueio.
 
 ## Créditos:
