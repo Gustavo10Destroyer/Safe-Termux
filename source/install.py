@@ -11,6 +11,7 @@ try:
     fim = '\033[m'
 
     system('apt update -y ; apt full-upgrade -y ; apt install fish termux-api -y ; python -m pip install --upgrade pip ; touch $HOME/.hushlogin ; mkdir $HOME/.bloqueio ; echo "$HOME/Safe-Termux/source/main.py" >> $HOME/.bashrc ; echo "exit" >> $HOME/.bashrc ; ln -s $HOME/.config/fish/config.fish $HOME/.fishrc')
+    system('echo "python $HOME/Safe-Termux/source/main.py" >> $PREFIX/etc/termux-login.sh')
 
     print(f'{limpeza}{ciano}Copie suas configurações de ".bashrc" em ".fishrc" assim que possível.')
     sleep(5)
