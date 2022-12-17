@@ -23,7 +23,7 @@ try:
     if desbloqueio == True:
 
         padlock(0)
-        system('rm -f $HOME/.bloqueio/.bio $HOME/.bloqueio/.key-1 $HOME/.bloqueio/.key-2 $HOME/.bloqueio/.key-3 > /dev/null ; cd $HOME ; bash')
+        system('rm -f $HOME/.bloqueio/.bio $HOME/.bloqueio/.key-1 $HOME/.bloqueio/.key-2 $HOME/.bloqueio/.key-3 > /dev/null ; cd $HOME')
 
     else:
 
