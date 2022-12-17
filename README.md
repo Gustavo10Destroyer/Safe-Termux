@@ -24,7 +24,9 @@ Bom, espero que gostem do meu repositório, o código não está perfeito nem de
 
 Da para se alterar a senha ou desinstalar o programa, mas para isso eu não irei ajudar vocẽs, façam esses procedimentos por vontade própria com seus métodos próprios.
 
-É obrigatório se ter o Termux API instalado, caso contrário o programa não ira funcionar, é extritamente obrigatório para o funcionamento do programa. 
+É obrigatório se ter o Termux API instalado, caso contrário o programa não ira funcionar, é extritamente obrigatório para o funcionamento do programa.
+
+Caso o limite de tentativas seja atingido, é possível recuperar o acesso ao Termux, e reiniciar a contagem, ou até mesmo desativar o bloqueio, para isso, o usuário precisa entrar no Termux pelo modo *failsafe*, e por ele, o usuário pode apagar os logs de tentativas anteriores na pasta *$HOME/.bloqueio*, com isso a contagem de tentativas reinicia, ou, o usuário pode de apagar o *.bashrc* para desativar o sistema de bloqueio.
 
 ## Créditos:
 
