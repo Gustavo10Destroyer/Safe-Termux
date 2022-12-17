@@ -4,7 +4,7 @@ try:
 
     from os import system
 
-    '''from fail import fail - Função desativada por mau-funcionamento e por conta do alto risco de causa problemas ao usuário.'''
+    from fail import fail
     from padlock import padlock
 
     desbloqueio = False
@@ -27,7 +27,7 @@ try:
 
     else:
 
-        '''fail() - Função desativada por mau-funcionamento e por conta do alto risco de causa problemas ao usuário.'''
+        fail()
         exit()
 
 except (KeyboardInterrupt):
