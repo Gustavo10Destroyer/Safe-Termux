@@ -45,7 +45,7 @@ while True:
         senha: str = getpass(f'{ciano}Digite uma nova senha: {fim}')
         tentativas = 0
 
-senha_hash = sha256(senha).hexdigest()
+senha_hash = sha256(senha.encode("utf-8")).hexdigest()
 
 arquivo = open('/data/data/com.termux/files/home/.bloqueio/kp', 'w')
 arquivo.write(senha_hash)
