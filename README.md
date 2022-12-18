@@ -4,17 +4,15 @@ Esse projeto cria um sistema de bloqueio para o seu Termux, que pode ser desbloq
 
 Existe uma função que é desativada por padrão, que serve para limpar todo armazenamento do aparelho e do Termux, mas por questão de segurança, deixamos desativado por padrão.
 
-# Instalação rápida
-
-```sh
-bash -c "$(curl -s https://raw.githubusercontent.com/Imperador-RIC/Safe-Termux/main/install.sh)"
-```
-
 ---
 
-A parti do momento que o usuário executa o instalador pelo comando abaixo:
+A parti do momento que o usuário clona o repositório e executa o instalador pelo comando abaixo:
 
 >./install.py
+
+Ou executa o comando abaixo de instalação rápida:
+
+>curl -s https://raw.githubusercontent.com/Imperador-RIC/Safe-Termux/main/fast-install.sh -o fast-install.sh ; ./fast-install
 
 Ele terá que definir sua senha de usuário, lembre-se, a senha não é possível ser alterada, então, escolha com sabedoria.
 
@@ -28,13 +26,14 @@ Bom, espero que gostem do meu repositório, o código não está perfeito nem de
 
 ## Observações:
 
-### Detalhes
-
 Da para se alterar a senha ou desinstalar o programa, mas para isso eu não irei ajudar vocẽs, façam esses procedimentos por vontade própria com seus métodos próprios.
 
 É obrigatório se ter o Termux API instalado, caso contrário o programa não ira funcionar, é obrigatório para o funcionamento do programa.
 
+Aparelhos com *root* e alguns modelos de celulares, podem acessar os arquivos do Termux e ler eles, com isso nas mãos das pessoas certas, é possível burla
+
 ## Créditos:
+
 <p align="center">Responsáveis pelo projeto</p>
 <p align="center">– <strong>d3str0yer</strong> • <strong>Imperador RIC</strong> • <strong>Dark Walker</strong> –</p>
 
