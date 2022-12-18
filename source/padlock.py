@@ -2,7 +2,7 @@
 
 """Curiosidade, o cadeado visto em arte ASCII em nosso programa, é da marca Pado."""
 
-from os import path
+import os
 from enum import Enum
 from time import sleep
 from utils import parse
@@ -49,7 +49,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
 
             return None
         elif lock == Padlock.BIOMETRIC:
-            if path.isfile(parse('$HOME/.bloqueio/bio')):
+            if os.path.isfile(parse('$HOME/.bloqueio/bio')):
                 return False
 
             mensagem = f"""{ciano}Safe-Termux - Bloqueio Biometrico!{fim}\n
@@ -73,6 +73,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
 
             result = authenticate(Authenticator.BIOMETRIC) # type: BiometricResult
 
+            os.makedirs(parse('$HOME/.bloqueio'), exist_ok=True)
             f = open(parse('$HOME/.bloqueio/bio'), 'w')
             f.close()
 
@@ -106,7 +107,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
             tentativas = 3
 
             for i in range(1, 4):
-                if path.isfile(parse(f'$HOME/.bloqueio/key-{i}')):
+                if os.path.isfile(parse(f'$HOME/.bloqueio/key-{i}')):
                     tentativas -= 1
 
             if tentativas == 0:
@@ -131,6 +132,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
 
                 resultado = check(resultado)
 
+                os.makedirs(parse('$HOME/.bloqueio'), exist_ok=True)
                 f = open(parse(f'$HOME/.bloqueio/key-{tentativas}'), 'w')
                 f.close()
 
