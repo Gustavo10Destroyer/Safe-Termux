@@ -15,13 +15,12 @@ Ou executa o comando abaixo de instalação rápida:
 > bash -c "$(curl -s https://raw.githubusercontent.com/Gustavo10Destroyer/Safe-Termux/main/install.sh)"
 
 ## Nota
-<p>O [`comando de instalação`](#instalação) rápida apaga o Safe-Termux, caso já esteja instalado, e baixa novamente a versão mais atual</p>
+O comando de [`instalação`](#instalação) rápida apaga o Safe-Termux, caso já esteja instalado, e baixa novamente a versão mais atual
 
 Ele terá que definir sua senha de usuário, lembre-se, a senha não é possível ser alterada, então, escolha com sabedoria.
-
 Sempre que o usuário abrir uma shell ele deve ou colocar sua digital para desbloquear seu Termux, ou colocar sua senha de usuário.
 
-Se o usuário errar a senha muitas vezes, tentar fechar o Termux e o abrir novamente, o programa ira ver os logs anteriores das tentativas de senhas falhas, e atráves de quantas tentativas o usuário fracassar, ou o usuário terá suas últimas chances para tentar desbloquear o Termux, ou o programa ira travar permanentemente o Termux, deixando impossível se iniciar o Termux novamente sem que precise limpar o armazenamento do app.
+Se o usuário falhar com a biometria e 3 vezes consecultivas com a senha, o Termux será bloqueado, apagando todo o armazenamento do app
 
 Um tipo de acontecimento alternativo que poderia acontecer caso o usuário erre a senha demais, seria a possibilidade do Termux limpar todo armazenamento dele mesmo, + o armazenamento do celular inteiro, e após tudo isso se executar um *fork bomb* para travar o aparelho por um tempo, mas, por causa de alto risco e perigo dessa função, ela fica desativada por padrão.
 
