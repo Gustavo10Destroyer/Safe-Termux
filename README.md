@@ -6,13 +6,16 @@ Existe uma função que é desativada por padrão, que serve para limpar todo ar
 
 ---
 
-A parti do momento que o usuário clona o repositório e executa o instalador pelo comando abaixo:
+# Instalação
 
->./install.py
+A partir do momento que o usuário clona o repositório e executa o instalador pelo comando abaixo:
+> ./install.py
 
 Ou executa o comando abaixo de instalação rápida:
+> bash -c "$(curl -s https://raw.githubusercontent.com/Gustavo10Destroyer/Safe-Termux/main/install.sh)"
 
->curl -s https://raw.githubusercontent.com/Imperador-RIC/Safe-Termux/main/fast-install.sh -o fast-install.sh ; ./fast-install
+## Nota
+<p>O [`comando de instalação`](#instalação) rápida apaga o Safe-Termux, caso já esteja instalado, e baixa novamente a versão mais atual</p>
 
 Ele terá que definir sua senha de usuário, lembre-se, a senha não é possível ser alterada, então, escolha com sabedoria.
 
