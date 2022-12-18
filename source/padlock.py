@@ -27,8 +27,6 @@ class Padlock(Enum):
 def padlock(lock: Padlock) -> Union[None, bool]:
     try:
         if lock == Padlock.UNLOCKED:
-            print(limpeza, end='')
-
             mensagem = f"""{verde}Safe-Termux - Termux Desbloqueado!{fim}\n
 {verde}          vILLYs2q:{fim}    
 {verde}        sBq 77::rY1ZB{fim}  
@@ -44,6 +42,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
 {verde}     .27ri.irvrJvirj2US{fim}
 {verde}     .dUs7rvvvsj1s2Pgdg{fim}"""
 
+            print(limpeza, end='')
             print_centered(mensagem)
             sleep(3)
 
@@ -64,6 +63,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
 {ciano}     .27ri.irvrJvirj2US{fim}
 {ciano}     .dUs7rvvvsj1s2Pgdg{fim}"""
 
+            print(limpeza, end='')
             print_centered(mensagem)
             sleep(3)
 
@@ -94,6 +94,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
             {amarelo}     .27ri.irvrJvirj2US{fim}
             {amarelo}     .dUs7rvvvsj1s2Pgdg{fim}"""
 
+            print(limpeza, end='')
             print_centered(mensagem)
             tentativas = 3
 
@@ -134,20 +135,23 @@ def padlock(lock: Padlock) -> Union[None, bool]:
             return resultado
 
         elif lock == Padlock.FULL_LOCK:
-            print(f'{limpeza}{vermelho}Safe-Termux - Bloqueio Total!{fim}\n')
-            print(f'{vermelho}          vILLYs2q:{fim}')
-            print(f'{vermelho}        sBq 77::rY1ZB{fim}')
-            print(f'{vermelho}       IQ ..     i .B{fim}')
-            print(f'{vermelho}       B i.       L 7B{fim}')
-            print(f'{vermelho}      rB B        .B B{fim}')
-            print(f'{vermelho}      jg B        .B B{fim}')
-            print(f'{vermelho}      sg B         B B{fim}')
-            print(f'{vermelho}     .U:i.::iirr7r7rUYd{fim}')
-            print(f'{vermelho}     .J7ii:::r7777v122I{fim}')
-            print(f'{vermelho}     .Irr::.::i:ii7v115{fim}')
-            print(f'{vermelho}     .U7i777r77v7JsIUUI{fim}')
-            print(f'{vermelho}     .27ri.irvrJvirj2US{fim}')
-            print(f'{vermelho}     .dUs7rvvvsj1s2Pgdg{fim}\n')
+            mensagem = f"""{vermelho}Safe-Termux - Bloqueio Total!{fim}\n
+{vermelho}          vILLYs2q:{fim}    
+{vermelho}        sBq 77::rY1ZB{fim}  
+{vermelho}       IQ ..     i .B{fim}  
+{vermelho}       B i.       L 7B{fim} 
+{vermelho}      rB B        .B B{fim} 
+{vermelho}      jg B        .B B{fim} 
+{vermelho}      sg B         B B{fim} 
+{vermelho}     .U:i.::iirr7r7rUYd{fim}
+{vermelho}     .J7ii:::r7777v122I{fim}
+{vermelho}     .Irr::.::i:ii7v115{fim}
+{vermelho}     .U7i777r77v7JsIUUI{fim}
+{vermelho}     .27ri.irvrJvirj2US{fim}
+{vermelho}     .dUs7rvvvsj1s2Pgdg{fim}"""
+
+            print(limpeza, end='')
+            print_centered(mensagem)
 
             sleep(3)
     except KeyboardInterrupt:
