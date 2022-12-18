@@ -24,7 +24,7 @@ class PasswordResult(Enum):
 def authenticate(authenticator: Authenticator = Authenticator.BIOMETRIC) -> Union[PasswordResult, BiometricResult]:
     """Authenticate the user with the given authentication method"""
     if authenticator == Authenticator.PASSWORD:
-        _command = ["termux-dialog", "text", "-t", "Digite a senha", "-i", "Safe-Termux v1.0.12", "-p"]
+        _command = ["termux-dialog", "text", "-t", "Digite a senha", "-i", "Safe-Termux v1.0.13", "-p"]
         _password = subprocess.check_output(_command).decode('utf-8')
 
         try:
@@ -39,7 +39,7 @@ def authenticate(authenticator: Authenticator = Authenticator.BIOMETRIC) -> Unio
         _result.password = _password.get("text", "")
         return _result
     elif authenticator == Authenticator.BIOMETRIC:
-        _command = ["termux-fingerprint", "-t", "Safe-Termux", "-i", "v1.0.12", "-s", "Use a impressão digital para desbloquear o Safe-Termux", "-c", "Usar senha"]
+        _command = ["termux-fingerprint", "-t", "Safe-Termux", "-s", "v1.0.13", "-d", "Use a impressão digital para desbloquear o Safe-Termux", "-c", "Usar senha"]
         _result = subprocess.check_output(_command).decode("utf-8")
 
         try:
