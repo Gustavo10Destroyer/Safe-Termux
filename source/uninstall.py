@@ -13,7 +13,7 @@ def uninstall() -> None:
     file.close()
 
     for i, line in enumerate(data):
-        if line == parse("python $HOME/Safe-Termux/source/main.py"):
+        if line.endswith('# Safe-Termux'):
             data.pop(i)
 
     file = open("/data/data/com.termux/files/usr/etc/termux-login.sh", "w")

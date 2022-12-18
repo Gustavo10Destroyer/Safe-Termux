@@ -8,7 +8,7 @@ ciano = '\x1b[1;36m'
 limpeza = '\x1b[H\x1b[2J\x1b[3J'
 fim = '\x1b[0m'
 
-system('apt update -y ; apt full-upgrade -y ; apt install termux-api -y ; python -m pip install --upgrade pip ; touch $HOME/.hushlogin ; mkdir $HOME/.bloqueio ; echo "python $HOME/Safe-Termux/source/main.py" >> $PREFIX/etc/termux-login.sh ; echo "exit" > null.sh ; chmod +x null.sh ; mv null.sh $PREFIX/bin ; chsh -s $PREFIX/bin/null.sh')
+system('apt update -y ; apt full-upgrade -y ; apt install termux-api -y ; python -m pip install --upgrade pip ; touch $HOME/.hushlogin ; mkdir $HOME/.bloqueio ; echo -n "python $HOME/Safe-Termux/source/main.py # Safe-Termux\nexit # Safe-Termux\n" >> $PREFIX/etc/termux-login.sh ; echo "exit" > null.sh ; chmod +x null.sh ; mv null.sh $PREFIX/bin ; chsh -s $PREFIX/bin/null.sh')
 
 print(f'{limpeza}{ciano}Digite a sua senha desejada!\nLembre-se que não é possível alterar sua senha depois.{fim}')
 senha: str

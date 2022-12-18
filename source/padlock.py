@@ -5,6 +5,7 @@
 from os import path
 from enum import Enum
 from time import sleep
+from utils import parse
 from check import check
 from typing import Union
 from utils import print_centered
@@ -48,6 +49,9 @@ def padlock(lock: Padlock) -> Union[None, bool]:
 
             return None
         elif lock == Padlock.BIOMETRIC:
+            if path.isfile(parse('$HOME/.bloqueio/bio')):
+                return False
+
             mensagem = f"""{ciano}Safe-Termux - Bloqueio Biometrico!{fim}\n
 {ciano}          vILLYs2q:{fim}    
 {ciano}        sBq 77::rY1ZB{fim}  
@@ -68,6 +72,9 @@ def padlock(lock: Padlock) -> Union[None, bool]:
             sleep(3)
 
             result = authenticate(Authenticator.BIOMETRIC) # type: BiometricResult
+
+            f = open(parse('$HOME/.bloqueio/bio'), 'w')
+            f.close()
 
             if result == BiometricResult.SUCCESS:
                 return True # Autenticação bem sucedida
@@ -99,7 +106,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
             tentativas = 3
 
             for i in range(1, 4):
-                if path.isfile(f'/data/data/com.termux/files/home/.bloqueio/key-{i}'):
+                if path.isfile(parse(f'$HOME/.bloqueio/key-{i}')):
                     tentativas -= 1
 
             if tentativas == 0:
@@ -124,8 +131,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
 
                 resultado = check(resultado)
 
-                f = open(f'/data/data/com.termux/files/home/.bloqueio/key-{tentativas}', 'w')
-                f.write('')
+                f = open(parse(f'$HOME/.bloqueio/key-{tentativas}', 'w'))
                 f.close()
 
                 tentativas -= 1
