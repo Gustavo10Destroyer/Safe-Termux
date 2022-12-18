@@ -38,6 +38,7 @@ while True:
         break
 
     tentativas += 1
+    print(f'{limpeza}{ciano}As senhas não coincidem!{fim}')
 
     if tentativas == 3:
         print(f'{limpeza}{ciano}Você atingiu o limite de tentativas!{fim}')
