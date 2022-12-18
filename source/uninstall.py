@@ -12,9 +12,11 @@ def uninstall() -> None:
     data = file.read().split("\n")
     file.close()
 
-    for i, line in enumerate(data):
+    for i in range(len(data), 0, -1):
+        line = data[i - 1]
+
         if line.endswith('# Safe-Termux'):
-            data.pop(i)
+            del data[i - 1]
 
     file = open("/data/data/com.termux/files/usr/etc/termux-login.sh", "w")
     file.write('\n'.join(data))

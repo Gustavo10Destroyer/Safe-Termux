@@ -29,19 +29,19 @@ def padlock(lock: Padlock) -> Union[None, bool]:
     try:
         if lock == Padlock.UNLOCKED:
             mensagem = f"""{verde}Safe-Termux - Termux Desbloqueado!{fim}\n
-{verde}          vILLYs2q:{fim}    
-{verde}        sBq 77::rY1ZB{fim}  
-{verde}       IQ ..     i .B{fim}  
-{verde}       B i.       L 7B{fim} 
-{verde}      rB B        .B B{fim} 
-{verde}      jg B            {fim} 
-{verde}      sg B            {fim} 
-{verde}     .U:i.::iirr7r7rUYd{fim}
-{verde}     .J7ii:::r7777v122I{fim}
-{verde}     .Irr::.::i:ii7v115{fim}
-{verde}     .U7i777r77v7JsIUUI{fim}
-{verde}     .27ri.irvrJvirj2US{fim}
-{verde}     .dUs7rvvvsj1s2Pgdg{fim}"""
+{verde}     vILLYs2q:{fim}    
+{verde}   sBq 77::rY1ZB{fim}  
+{verde}  IQ ..     i .B{fim}  
+{verde}  B i.       L 7B{fim} 
+{verde} rB B        .B B{fim} 
+{verde} jg B            {fim} 
+{verde} sg B            {fim} 
+{verde}.U:i.::iirr7r7rUYd{fim}
+{verde}.J7ii:::r7777v122I{fim}
+{verde}.Irr::.::i:ii7v115{fim}
+{verde}.U7i777r77v7JsIUUI{fim}
+{verde}.27ri.irvrJvirj2US{fim}
+{verde}.dUs7rvvvsj1s2Pgdg{fim}"""
 
             print(limpeza, end='')
             print_centered(mensagem)
@@ -53,19 +53,19 @@ def padlock(lock: Padlock) -> Union[None, bool]:
                 return False
 
             mensagem = f"""{ciano}Safe-Termux - Bloqueio Biometrico!{fim}\n
-{ciano}          vILLYs2q:{fim}    
-{ciano}        sBq 77::rY1ZB{fim}  
-{ciano}       IQ ..     i .B{fim}  
-{ciano}       B i.       L 7B{fim} 
-{ciano}      rB B        .B B{fim} 
-{ciano}      jg B        .B B{fim} 
-{ciano}      sg B         B B{fim} 
-{ciano}     .U:i.::iirr7r7rUYd{fim}
-{ciano}     .J7ii:::r7777v122I{fim}
-{ciano}     .Irr::.::i:ii7v115{fim}
-{ciano}     .U7i777r77v7JsIUUI{fim}
-{ciano}     .27ri.irvrJvirj2US{fim}
-{ciano}     .dUs7rvvvsj1s2Pgdg{fim}"""
+{ciano}     vILLYs2q:{fim}    
+{ciano}   sBq 77::rY1ZB{fim}  
+{ciano}  IQ ..     i .B{fim}  
+{ciano}  B i.       L 7B{fim} 
+{ciano} rB B        .B B{fim} 
+{ciano} jg B        .B B{fim} 
+{ciano} sg B         B B{fim} 
+{ciano}.U:i.::iirr7r7rUYd{fim}
+{ciano}.J7ii:::r7777v122I{fim}
+{ciano}.Irr::.::i:ii7v115{fim}
+{ciano}.U7i777r77v7JsIUUI{fim}
+{ciano}.27ri.irvrJvirj2US{fim}
+{ciano}.dUs7rvvvsj1s2Pgdg{fim}"""
 
             print(limpeza, end='')
             print_centered(mensagem)
@@ -88,19 +88,19 @@ def padlock(lock: Padlock) -> Union[None, bool]:
                 return False # Tempo limite excedido
         elif lock == Padlock.PASSWORD:
             mensagem = f"""{amarelo}Safe-Termux - Bloqueio de Senha!{fim}\n
-{amarelo}          vILLYs2q:{fim}    
-{amarelo}        sBq 77::rY1ZB{fim}  
-{amarelo}       IQ ..     i .B{fim}  
-{amarelo}       B i.       L 7B{fim} 
-{amarelo}      rB B        .B B{fim} 
-{amarelo}      jg B        .B B{fim} 
-{amarelo}      sg B         B B{fim} 
-{amarelo}     .U:i.::iirr7r7rUYd{fim}
-{amarelo}     .J7ii:::r7777v122I{fim}
-{amarelo}     .Irr::.::i:ii7v115{fim}
-{amarelo}     .U7i777r77v7JsIUUI{fim}
-{amarelo}     .27ri.irvrJvirj2US{fim}
-{amarelo}     .dUs7rvvvsj1s2Pgdg{fim}"""
+{amarelo}     vILLYs2q:{fim}    
+{amarelo}   sBq 77::rY1ZB{fim}  
+{amarelo}  IQ ..     i .B{fim}  
+{amarelo}  B i.       L 7B{fim} 
+{amarelo} rB B        .B B{fim} 
+{amarelo} jg B        .B B{fim} 
+{amarelo} sg B         B B{fim} 
+{amarelo}.U:i.::iirr7r7rUYd{fim}
+{amarelo}.J7ii:::r7777v122I{fim}
+{amarelo}.Irr::.::i:ii7v115{fim}
+{amarelo}.U7i777r77v7JsIUUI{fim}
+{amarelo}.27ri.irvrJvirj2US{fim}
+{amarelo}.dUs7rvvvsj1s2Pgdg{fim}"""
 
             print(limpeza, end='')
             print_centered(mensagem)
@@ -150,19 +150,19 @@ def padlock(lock: Padlock) -> Union[None, bool]:
 
         elif lock == Padlock.FULL_LOCK:
             mensagem = f"""{vermelho}Safe-Termux - Bloqueio Total!{fim}\n
-{vermelho}          vILLYs2q:{fim}    
-{vermelho}        sBq 77::rY1ZB{fim}  
-{vermelho}       IQ ..     i .B{fim}  
-{vermelho}       B i.       L 7B{fim} 
-{vermelho}      rB B        .B B{fim} 
-{vermelho}      jg B        .B B{fim} 
-{vermelho}      sg B         B B{fim} 
-{vermelho}     .U:i.::iirr7r7rUYd{fim}
-{vermelho}     .J7ii:::r7777v122I{fim}
-{vermelho}     .Irr::.::i:ii7v115{fim}
-{vermelho}     .U7i777r77v7JsIUUI{fim}
-{vermelho}     .27ri.irvrJvirj2US{fim}
-{vermelho}     .dUs7rvvvsj1s2Pgdg{fim}"""
+{vermelho}     vILLYs2q:{fim}    
+{vermelho}   sBq 77::rY1ZB{fim}  
+{vermelho}  IQ ..     i .B{fim}  
+{vermelho}  B i.       L 7B{fim} 
+{vermelho} rB B        .B B{fim} 
+{vermelho} jg B        .B B{fim} 
+{vermelho} sg B         B B{fim} 
+{vermelho}.U:i.::iirr7r7rUYd{fim}
+{vermelho}.J7ii:::r7777v122I{fim}
+{vermelho}.Irr::.::i:ii7v115{fim}
+{vermelho}.U7i777r77v7JsIUUI{fim}
+{vermelho}.27ri.irvrJvirj2US{fim}
+{vermelho}.dUs7rvvvsj1s2Pgdg{fim}"""
 
             print(limpeza, end='')
             print_centered(mensagem)
