@@ -80,19 +80,19 @@ def padlock(lock: Padlock) -> Union[None, bool]:
                 return False # Tempo limite excedido
         elif lock == Padlock.PASSWORD:
             mensagem = f"""{amarelo}Safe-Termux - Bloqueio de Senha!{fim}\n
-            {amarelo}          vILLYs2q:{fim}
-            {amarelo}        sBq 77::rY1ZB{fim}
-            {amarelo}       IQ ..     i .B{fim}
-            {amarelo}       B i.       L 7B{fim}
-            {amarelo}      rB B        .B B{fim}
-            {amarelo}      jg B        .B B{fim}
-            {amarelo}      sg B         B B{fim}
-            {amarelo}     .U:i.::iirr7r7rUYd{fim}
-            {amarelo}     .J7ii:::r7777v122I{fim}
-            {amarelo}     .Irr::.::i:ii7v115{fim}
-            {amarelo}     .U7i777r77v7JsIUUI{fim}
-            {amarelo}     .27ri.irvrJvirj2US{fim}
-            {amarelo}     .dUs7rvvvsj1s2Pgdg{fim}"""
+{amarelo}          vILLYs2q:{fim}    
+{amarelo}        sBq 77::rY1ZB{fim}  
+{amarelo}       IQ ..     i .B{fim}  
+{amarelo}       B i.       L 7B{fim} 
+{amarelo}      rB B        .B B{fim} 
+{amarelo}      jg B        .B B{fim} 
+{amarelo}      sg B         B B{fim} 
+{amarelo}     .U:i.::iirr7r7rUYd{fim}
+{amarelo}     .J7ii:::r7777v122I{fim}
+{amarelo}     .Irr::.::i:ii7v115{fim}
+{amarelo}     .U7i777r77v7JsIUUI{fim}
+{amarelo}     .27ri.irvrJvirj2US{fim}
+{amarelo}     .dUs7rvvvsj1s2Pgdg{fim}"""
 
             print(limpeza, end='')
             print_centered(mensagem)
@@ -126,12 +126,11 @@ def padlock(lock: Padlock) -> Union[None, bool]:
 
                 tentativas -= 1
 
-                if resultado == True:
+                if resultado == True or tentativas == 0:
                     break
-                else:
-                    print(f'Tente novamente, você tem {tentativas} tentativas sobrando!')
 
-            resultado = False
+                print(f'Tente novamente, você tem {tentativas} tentativas sobrando!')
+
             return resultado
 
         elif lock == Padlock.FULL_LOCK:
