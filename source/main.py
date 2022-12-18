@@ -32,6 +32,7 @@ try:
 
         os.system('cd $HOME ; bash')
     else:
+        padlock(Padlock.FULL_LOCK)
         fail()
 except KeyboardInterrupt:
     exit(1)

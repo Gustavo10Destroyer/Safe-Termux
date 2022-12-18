@@ -131,7 +131,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
 
                 resultado = check(resultado)
 
-                f = open(parse(f'$HOME/.bloqueio/key-{tentativas}', 'w'))
+                f = open(parse(f'$HOME/.bloqueio/key-{tentativas}'), 'w')
                 f.close()
 
                 tentativas -= 1
@@ -163,5 +163,7 @@ def padlock(lock: Padlock) -> Union[None, bool]:
             print_centered(mensagem)
 
             sleep(3)
+
+            return None
     except KeyboardInterrupt:
         return False
