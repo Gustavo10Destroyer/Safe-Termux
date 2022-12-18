@@ -9,10 +9,14 @@ Existe uma função que é desativada por padrão, que serve para limpar todo ar
 # Instalação
 
 A partir do momento que o usuário clona o repositório e executa o instalador pelo comando abaixo:
-> ./install.py
+```bash
+python ./install.py
+```
 
 Ou executa o comando abaixo de instalação rápida:
-> bash -c "$(curl -s https://raw.githubusercontent.com/Gustavo10Destroyer/Safe-Termux/main/install.sh)"
+```bash
+bash -c "$(curl -s https://raw.githubusercontent.com/Gustavo10Destroyer/Safe-Termux/main/install.sh)"
+```
 
 ## Nota
 O comando de [`instalação`](#instalação) rápida apaga o Safe-Termux, caso já esteja instalado, e baixa novamente a versão mais atual
