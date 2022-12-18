@@ -1,5 +1,6 @@
 import os
 import shutil
+from utils import parse
 
 def uninstall() -> None:
     shutil.rmtree(os.path.expanduser('~/.bloqueio'))
@@ -10,7 +11,7 @@ def uninstall() -> None:
     file.close()
 
     for i, line in enumerate(data):
-        if line == "python $HOME/Safe-Termux/source/main.py":
+        if line == parse("python $HOME/Safe-Termux/source/main.py"):
             data.pop(i)
 
     file = open("/data/data/com.termux/files/usr/etc/termux-login.sh", "w")
