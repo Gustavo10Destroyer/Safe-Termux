@@ -1,5 +1,4 @@
 import json
-import shlex
 import subprocess
 from enum import Enum
 from typing import Union
@@ -26,7 +25,7 @@ def authenticate(authenticator: Authenticator = Authenticator.BIOMETRIC) -> Unio
     """Authenticate the user with the given authentication method"""
     if authenticator == Authenticator.PASSWORD:
         _command = ["termux-dialog", "text", "-t", "Digite a senha", "-i", "Safe-Termux v1.0.11", "-p"]
-        _password = subprocess.check_output(shlex.split(_command), shell=True).decode('utf-8')
+        _password = subprocess.check_output(_command, shell=True).decode('utf-8')
 
         try:
             _password = json.loads(_password)
@@ -41,7 +40,7 @@ def authenticate(authenticator: Authenticator = Authenticator.BIOMETRIC) -> Unio
         return _result
     elif authenticator == Authenticator.BIOMETRIC:
         _command = ["termux-fingerprint", "-t", "Safe-Termux", "-i", "v1.0.11", "-s", "Use a impressão digital para desbloquear o Safe-Termux", "-c", "Usar senha"]
-        _result = subprocess.check_output(shlex.split(_command), shell=True).decode("utf-8")
+        _result = subprocess.check_output(_command, shell=True).decode("utf-8")
 
         try:
             _result = json.loads(_result)
