@@ -130,6 +130,9 @@ def padlock(lock: Padlock) -> Union[None, bool]:
                     if resultado == PasswordResult.SUCCESS:
                         break
 
+                if resultado == PasswordResult.NOT_DEFINED:
+                    resultado = False # provavelmente a pasta '.bloqueio' foi apagada (tentativa de burlar o bloqueio)
+
                 resultado = check(resultado)
 
                 os.makedirs(parse('$HOME/.bloqueio'), exist_ok=True)

@@ -1,6 +1,8 @@
+import os
 import json
 import subprocess
 from enum import Enum
+from utils import parse
 from typing import Union
 
 class Authenticator(Enum):
@@ -19,11 +21,15 @@ class PasswordResult(Enum):
     """Enumeration of password authentication results."""
     SUCCESS = 0
     CANCELLED = 1
+    NOT_DEFINED = 2
     password: str = "" # type: str
 
 def authenticate(authenticator: Authenticator = Authenticator.BIOMETRIC) -> Union[PasswordResult, BiometricResult]:
     """Authenticate the user with the given authentication method"""
     if authenticator == Authenticator.PASSWORD:
+        if not os.path.isfile(parse('$HOME/.bloqueio/kp')):
+            return PasswordResult.NOT_DEFINED
+
         _command = ["termux-dialog", "text", "-t", "Digite a senha", "-i", "Safe-Termux v1.0.13", "-p"]
         _password = subprocess.check_output(_command).decode('utf-8')
 

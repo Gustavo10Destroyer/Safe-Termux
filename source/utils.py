@@ -8,33 +8,22 @@ def parse(command: str) -> str:
 
     return command
 
+# escreve no centro da tela
+# centralizando o texto na horizontal e vertical
 def print_centered(text: str) -> None:
-    rows = 0
-    columns = 0
+    rows, columns = os.get_terminal_size()
 
-    width, height = os.get_terminal_size()
+    # centralizando o texto na vertical
+    text = text.splitlines()
 
-    for line in text.splitlines():
-        rows += 1
-        # tamanho total é apenas números, letras e espaços
-        total_size = re.sub(r"\x1b\[[0-9;]*m", "", line)
+    y = (columns - len(text)) // 2
 
-        columns = max(columns, len(total_size))
+    for index, line in enumerate(text):
+        # centralizando o texto na horizontal
+        x = (rows - len(line)) // 2
 
-    line_index = 0
-    width = round(width / 2)
-    height = round((height - rows) / 2)
-
-    if height % 2 != 0:
-        line_index = 1
-
-    for line in text.splitlines():
-        x = width - round(len(line) / 2)
-        y = height - round(round(rows / 2) / 2) + line_index
-
-        sys.stdout.write("\033[{};{}H".format(height + line_index, x))
-        sys.stdout.write(line + "\n")
-
-        line_index += 1
+        sys.stdout.write("\x1b[{};{}H".format(y + index, x))
+        sys.stdout.write(line)
+        sys.stdout.write("\n")
 
     sys.stdout.flush()
