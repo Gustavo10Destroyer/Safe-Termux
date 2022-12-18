@@ -19,7 +19,7 @@ while True:
         senha: str = getpass(f'{ciano}Senha: {fim}')
     except (EOFError, KeyboardInterrupt):
         print(f'{limpeza}{ciano}Você precisa definir uma senha!{fim}')
-        exit()
+        continue
 
     if len(senha) < 8:
         print(f'{limpeza}{ciano}Sua senha deve conter no mínimo 8 caracteres!{fim}')
@@ -32,7 +32,7 @@ while True:
         confirma_senha: str = getpass(f'{ciano}Confirme sua senha: {fim}')
     except (EOFError, KeyboardInterrupt):
         print(f'{limpeza}{ciano}Você precisa definir uma senha!{fim}')
-        exit()
+        continue
 
     if senha == confirma_senha:
         break
