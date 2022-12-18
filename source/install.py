@@ -15,7 +15,11 @@ senha: str
 tentativas: int = 0
 
 while True:
-    senha: str = getpass(f'{ciano}Senha: {fim}')
+    try:
+        senha: str = getpass(f'{ciano}Senha: {fim}')
+    except (EOFError, KeyboardInterrupt):
+        print(f'{limpeza}{ciano}Você precisa definir uma senha!{fim}')
+        exit()
 
     if len(senha) < 8:
         print(f'{limpeza}{ciano}Sua senha deve conter no mínimo 8 caracteres!{fim}')
@@ -26,7 +30,7 @@ while True:
 while True:
     try:
         confirma_senha: str = getpass(f'{ciano}Confirme sua senha: {fim}')
-    except KeyboardInterrupt:
+    except (EOFError, KeyboardInterrupt):
         print(f'{limpeza}{ciano}Você precisa definir uma senha!{fim}')
         exit()
 
