@@ -9,7 +9,7 @@ def uninstall() -> None:
         os.remove(os.path.expanduser('~/.hushlogin'))
 
     file = open("/data/data/com.termux/files/usr/etc/termux-login.sh", "r")
-    data = file.read().splitlines()
+    data = file.read().split("\n")
     file.close()
 
     for i, line in enumerate(data):
@@ -17,7 +17,7 @@ def uninstall() -> None:
             data.pop(i)
 
     file = open("/data/data/com.termux/files/usr/etc/termux-login.sh", "w")
-    file.write('\r\n'.join(data))
+    file.write('\n'.join(data))
     file.close()
 
     os.system('chsh -s bash')
