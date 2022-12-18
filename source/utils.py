@@ -16,7 +16,10 @@ def print_centered(text: str) -> None:
 
     for line in text.splitlines():
         rows += 1
-        columns = max(columns, len(line))
+        # tamanho total é apenas números, letras e espaços
+        total_size = re.sub(r"\x1b\[[0-9;]*m", "", line)
+
+        columns = max(columns, len(total_size))
 
     line_index = 0
     width = round(width / 2)

@@ -102,6 +102,10 @@ def padlock(lock: Padlock) -> Union[None, bool]:
                 if path.isfile(f'/data/data/com.termux/files/home/.bloqueio/key-{i}'):
                     tentativas -= 1
 
+            if tentativas == 0:
+                print('Você não tem mais tentativas!')
+                return False
+
             print(f'Você tem direito a {tentativas} tentativas!')
 
             resultado: bool = False # O resultado padrão
