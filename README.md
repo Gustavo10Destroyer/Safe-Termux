@@ -30,7 +30,9 @@ Da para se alterar a senha ou desinstalar o programa, mas para isso eu não irei
 
 É obrigatório se ter o Termux API instalado, caso contrário o programa não ira funcionar, é obrigatório para o funcionamento do programa.
 
-Aparelhos com *root* e alguns modelos de celulares, podem acessar os arquivos do Termux e ler eles, com isso nas mãos das pessoas certas, é possível burla
+## Aviso de Segurança:
+
+Apesar da alta segurança do nosso código, ele é possível de ser burlado, princípalmente por conta do *root*, de certos modelos de celulares no mercado, por conta do funcionamento do Termux e seu modo de segurança, entre outras coisas, nosso código é seguro, mas não absoluto.
 
 ## Créditos:
 
