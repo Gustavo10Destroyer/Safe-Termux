@@ -36,7 +36,10 @@ def authenticate(authenticator: Authenticator = Authenticator.BIOMETRIC) -> Unio
         try:
             _password = json.loads(_password)
         except json.decoder.JSONDecodeError:
-            raise RuntimeError('Invalid JSON returned from termux-dialog')
+            exit(1) # Isso vai fazer o Termux do usuário fechar
+            # Quando ele abrir novamente, vai rodar tudo normal
+            # (um erro de JSON incompleto acontece no termux-dialog, quando, assim que a janela aparece
+            # você troca de app, ai a janela é fechada)
 
         if _password.get("code", 0) == -2:
             return PasswordResult.CANCELLED
@@ -51,7 +54,10 @@ def authenticate(authenticator: Authenticator = Authenticator.BIOMETRIC) -> Unio
         try:
             _result = json.loads(_result)
         except json.decoder.JSONDecodeError:
-            raise RuntimeError('Invalid JSON returned from termux-biometric')
+            exit(1) # Eu não sei se a mesma coisa acontece na biometria (provavelmente não
+            # pelo menos no meu Galaxy A31, a janela de biometria remove a barra de ação
+            # impossibilitando a pessoa de pressionar qualquer um dos botões) e se o usuário
+            # trocar de janela, a biometria provavelmente é dada por cancelada
 
         if ("ERROR_TIMEOUT" in _result.get("errors", [])):
             return BiometricResult.TIMEOUT
