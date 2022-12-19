@@ -1,6 +1,6 @@
+#!/data/data/com.termux/files/usr/bin/python3
 import os
 import shutil
-from utils import parse
 
 def uninstall() -> None:
     shutil.rmtree(os.path.expanduser('~/.bloqueio'), ignore_errors=True)
