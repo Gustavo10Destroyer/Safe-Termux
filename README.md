@@ -45,4 +45,5 @@ Apesar da alta segurança do nosso código, ele é possível de ser burlado, pri
 <p align="center">Responsáveis pelo projeto</p>
 <p align="center">– <strong>d3str0yer</strong> • <strong>Imperador RIC</strong> • <strong>Dark Walker</strong> –</p>
 
+<strong>Obrigado [`Silver`](https://github.com/VantzBlackz) por fazer testes de penetração e descobrir 2 falhas importantes de segurança!</strong>
 Agradecimentos especiais a vocês que me ajudaram nesse projeto, agradeço ao [`D3str0yer`](https://github.com/Gustavo10Destroyer) por todo apoio e suporte com as partes mais complexas do código, agradeço ao [`Dark Walker`](https://github.com/ReiDarkWalker) por me ajudar com todo o projeto do início ao fim, por me ajudar com a arte ASCII, variáveis, obrigado por literalmente tudo.
