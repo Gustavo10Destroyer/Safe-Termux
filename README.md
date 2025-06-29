@@ -15,7 +15,7 @@ python ./install.py
 
 Ou executa o comando abaixo de instalação rápida:
 ```bash
-bash -c "$(curl -s https://raw.githubusercontent.com/Gustavo10Destroyer/Safe-Termux/main/install.sh)"
+bash -c "$(curl -s https://raw.githubusercontent.com/Gustavo10Destroyer/Safe-Termux/master/install.sh)"
 ```
 
 ## Nota
